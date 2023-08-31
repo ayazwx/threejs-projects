@@ -40,7 +40,7 @@ loader.load(
     function (xhr) {
         let percentComplete = xhr.loaded / xhr.total * 100;
         console.log( percentComplete + '% loaded');
-        loadingSpin[0].innerHTML = percentComplete.toString().slice(0,3) + '%';
+        loadingSpin[0].innerHTML = percentComplete.toString().slice(0,4) + '%';
 
         if (percentComplete === 100) {
             loadingText.innerHTML = 'Loaded! Please wait!'; // Click and drag to move the object
