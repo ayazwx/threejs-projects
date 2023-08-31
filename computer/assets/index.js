@@ -100,4 +100,26 @@ function animate() {
 
 animate();
 
+const colorSelect = document.getElementById('color-select')
 
+const colorOptions = ['white', 'red', 'black', 'blue']
+
+colorOptions.forEach(color => {
+    const option = document.createElement('div')
+    option.value = color
+    option.className = 'color-option'
+    option.style.backgroundColor = color
+    colorSelect.appendChild(option)
+    option.addEventListener('click', () => {
+        object.traverse(function (child) {
+            if (document.getElementById('selecting-color').value === 'material') {
+            if (child.isMesh) {
+                child.material.color.set(color)
+            }} else {
+                document.getElementById('container3D').style.backgroundColor = color
+            }
+        })
+    }
+    )
+}
+)
