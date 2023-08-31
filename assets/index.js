@@ -6,6 +6,8 @@ import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/js
 // To allow for importing the .gltf file
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -17,6 +19,9 @@ let objToRender = 'ASUS-Laptop'
 
 const loader = new GLTFLoader();
 
+var loadingElement = document.getElementById('loading');
+var loadingSpin = document.getElementsByClassName('loading-spin');
+var loadingText = document.getElementById('loading-text');
 loader.load(
     // resource URL
     `assets/models/${objToRender}.glb`,
@@ -33,8 +38,19 @@ loader.load(
 
     // called while loading is progressing
     function (xhr) {
+        let percentComplete = xhr.loaded / xhr.total * 100;
+        console.log( percentComplete + '% loaded');
+        loadingSpin[0].innerHTML = percentComplete.toString().slice(0,3) + '%';
 
-        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+        if (percentComplete === 100) {
+            loadingText.innerHTML = 'Loaded! Please wait!'; // Click and drag to move the object
+            setTimeout(() => {
+                loadingElement.style.display = 'none';
+            }
+                , 3000)
+        }
+
+
 
     },
     function (error) {
