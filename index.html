@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Threejs Projects</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Laptop - Threejs</h1>
-        <nav>
-            <ul>
-                <li><a href="https://ayazvefa.dev">My Main Website</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="nav">
+        <div id="logo">
+            <map name="logo">
+                <area shape="rect" href="https://ayazvefa.dev" coords="12,13,91,32" alt="Main Website"
+                    title="vefa ayaz website" />
+                <area shape="rect" href="https://blog.ayazvefa.dev" coords="12,32,44,46" alt="Blog" />
+                <area shape="rect" href="https://twitter.com/ayazwx" coords="47,32,88,46" alt="Twitter" />
+            </map>
+            <img src="./assets/logo.svg" alt="logo" width="105" usemap="#logo" />
+        </div>
+        <div id="projects"></div>
+        <div id="expand"><span></span><span></span><span></span></div>
+    </div>
+    <!-- <div id="viewer">
+        <iframe id="iframe" style="border:0;width:100%;height:100%"></iframe>
+    </div> -->
 
     <div id="container3D"></div>
     <script type="module" src="./assets/index.js"></script>
 </body>
+
 </html>

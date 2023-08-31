@@ -5,58 +5,34 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: #fff;
-    background: #161747;
+    background: #000;
     overflow: hidden;
 }
 a {
     text-decoration: none;
     color: #fff;
 }
-header {
+#nav {
     background: linear-gradient(to bottom, #000000 50%,#1d1d1d 97%,#333333 97%);
     width: 100%;
     height: 61px;
     overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
 }
 
-header .logo {
-    font-size: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-li {
-    list-style: none;
-    position: relative;
-    font-size: 20px;
-    color: #fff;
-}
-li:hover {
-    color: #645252;
-}
-li:hover::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 1px solid #fff;
-    animation: animate 0.3s linear forwards;
+#logo {
+    height: 61px;
+    float: left;
+    margin-left: 10px;
 }
 
-@keyframes animate {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
+#container3D {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+#container3D:active {
+    cursor: grabbing;
 }
