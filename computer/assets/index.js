@@ -48,6 +48,8 @@ loader.load(
                 loadingElement.style.display = 'none';
             }
                 , 3000)
+        } else if (percentComplete === 'infinity') {
+            loadingText.innerHTML = 'Error! Please click "X" to close loading or refresh the page and try again!';
         }
 
 
@@ -121,5 +123,13 @@ colorOptions.forEach(color => {
         })
     }
     )
+}
+)
+
+
+var exitLoading = document.getElementsByClassName('exit-loading');
+
+exitLoading[0].addEventListener('click', () => {
+    loadingElement.style.display = 'none';
 }
 )

@@ -107,3 +107,16 @@ a {
     border: 2px solid #fff;
     opacity: 0.8;
 }
+
+.exit-loading {
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    border: none;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
