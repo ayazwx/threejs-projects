@@ -48,7 +48,7 @@ loader.load(
                 loadingElement.style.display = 'none';
             }
                 , 3000)
-        } else if (percentComplete === 'infinity') {
+        } else if (percentComplete === 'Infinity') {
             loadingText.innerHTML = 'Error! Please click "X" to close loading or refresh the page and try again!';
         }
 
