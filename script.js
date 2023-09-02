@@ -22,6 +22,12 @@ var data = [
         "name" : "Three.js Demo",
         "timestamp": "2023 / 08 / 08",
         "link": "https://threejs-demo-wheat.vercel.app/"
+    },
+    {
+        "id": 5,
+        "name" : "Lamborghini - THREE.js",
+        "timestamp": "2023 / 09 / 02",
+        "link": "./lamborghini"
     }
 ];
 
